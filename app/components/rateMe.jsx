@@ -69,6 +69,7 @@ const RateMe = () => {
               <input
                 type="text"
                 name="name"
+                id="name"
                 value={data.name}
                 onChange={onChangeHandler}
                 required
@@ -84,6 +85,7 @@ const RateMe = () => {
               <input
                 type="email"
                 name="email"
+                id="email"
                 value={data.email}
                 onChange={onChangeHandler}
                 required
@@ -100,6 +102,7 @@ const RateMe = () => {
               </label>
               <textarea
                 name="comment"
+                id="comment"
                 value={data.comment}
                 onChange={onChangeHandler}
                 placeholder="Share your thoughts"

@@ -17,7 +17,7 @@ const AboutMe = () => {
 
 
       <div className="flex gap-20">
-        <div className="p-1 border-4 border-gray-800 rounded-lg bg-white">
+        <div className="p-1 border-4 border-gray-800 rounded-lg bg-white w-[40%]">
           <Image src={assets.jeeChian} alt="Jee Chian" height={300} />
         </div>
 
