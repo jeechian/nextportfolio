@@ -14,7 +14,7 @@ const Page = () => {
                 <h1 className="flex justify-center w-full mt-0 text-4xl font-bold">
                     Lumberjack Blues
                 </h1>
-                <motion.div className="flex"
+                <motion.div className="flex grid lg:grid-cols-2 md-grid-cols-2 sm:grid-cols-1"
                     initial={{ opacity: 0, x: "blur(10px) " }} // Start off-screen to the left
                     whileInView={{ opacity: 1, filter: "blur(0px)" }} // Animate when in view
                     transition={{ duration: 0.8, ease: "easeOut" }}
@@ -27,23 +27,23 @@ const Page = () => {
                         </div>
                     </div>
 
-                    <div className="pl-24 pt-5 max-w-2xl">
-                        <p className="space-x-2">
+                    <div className="pt-5 sm:pl-10 sm:max-w-2xl">
+                        <p className="space-x-2 text-base sm:text-lg mb-4">
                             Developed a 2D game in Unity where players chop trees to earn money, upgrade attributes, and unlock new skills through market transactions. Utilized C# scripting for game mechanics, including tree chopping, attribute upgrades, and skill unlocking.
-                            <br /><strong className="text-yellow-500" >~2024 DEC</strong>
+                            <br />
+                            <strong className="text-yellow-500">~2024 DEC</strong>
                         </p>
-                        <br />
-                        <h2 className="text-3xl font-bold">Developed By:</h2>
-                        <h3 className="text-xl font-bold pt-2">
+                        <h2 className="text-3xl sm:text-4xl font-bold">Developed By:</h2>
+                        <h3 className="text-lg sm:text-xl font-bold pt-2">
                             Coding: Ng Jee Chian <br /> Animation and UI: Nigel
                         </h3>
                         <h2 className="text-4xl font-bold pt-10">Title</h2>
-                        <div className="p-1 border-4 border-gray-800 rounded-lg bg-white">
-                            <Image src={gameDev[1].src} alt="title" />
+                        <div className="p-1 border-4 border-gray-800 rounded-lg bg-white mb-4">
+                            <Image src={gameDev[1].src} alt="Title" width={800} height={450} />
                         </div>
                         <h2 className="text-4xl font-bold pt-10">Game Scene</h2>
-                        <div className="p-1 border-4 border-gray-800 rounded-lg bg-white">
-                            <Image src={gameDev[0].src} alt="control" />
+                        <div className="p-1 border-4 border-gray-800 rounded-lg bg-white mb-4">
+                            <Image src={gameDev[0].src} alt="Game Scene" width={800} height={450} />
                         </div>
                     </div>
                 </motion.div >
