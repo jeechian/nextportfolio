@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { program_page } from "../asset/asset"; // Importing the icon array
+import { program_page } from "../Assets/asset"; // Importing the icon array
 import Link from "next/link";
 
 

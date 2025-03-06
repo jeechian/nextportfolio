@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
-import { assets } from "../Asset/asset";
+import { assets } from "../Assets/asset";
 import { motion } from "framer-motion";
 
 
@@ -28,7 +28,7 @@ const ListRate = () => {
   });
 
   return (
-    <motion.div className="w-[full] p-10 rounded-lg bg-slate-950 flex flex-col items-center"
+    <motion.div className="w-[full] p-10 bg-slate-950 flex flex-col items-center"
       initial={{ opacity: 0, x: "blur(10px) " }} // Start off-screen to the left
       whileInView={{ opacity: 1, filter: "blur(0px)" }} // Animate when in view
       transition={{ duration: 0.8, ease: "easeOut" }}

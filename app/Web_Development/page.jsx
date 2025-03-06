@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 import Image from "next/image";
-import { webDev } from "../Asset/asset";
+import { webDev } from "../Assets/asset";
 import { motion } from "framer-motion";
 
 

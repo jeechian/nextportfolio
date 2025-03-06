@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 import Image from "next/image";
-import { EP } from "../Asset/asset";
+import { EP } from "../Assets/asset";
 import { motion } from "framer-motion";
 
 

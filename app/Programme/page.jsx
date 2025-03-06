@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 import Image from "next/image";
-import { gameDev } from "../Asset/asset";
+import { gameDev } from "../Assets/asset";
 import { motion } from "framer-motion";
 
 const Page = () => {

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { assets } from "../../app/asset/asset";
+import { assets } from "../Assets/asset";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
@@ -48,7 +48,7 @@ const RateMe = () => {
   };
 
   return (
-    <motion.div className="w-[full] p-10 rounded-lg bg-slate-900 flex flex-col items-center"
+    <motion.div className="w-[full] p-10 bg-slate-900 flex flex-col items-center"
       initial={{ opacity: 0, x: "blur(10px) " }} // Start off-screen to the left
       whileInView={{ opacity: 1, filter: "blur(0px)" }} // Animate when in view
       transition={{ duration: 0.8, ease: "easeOut" }}

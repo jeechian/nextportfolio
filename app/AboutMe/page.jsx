@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { assets } from "../../app/asset/asset";
+import { assets } from "../Assets/asset";
 
 
 const AboutMe = () => {
@@ -17,10 +17,6 @@ const AboutMe = () => {
 
 
       <div className="flex gap-20">
-        <div className="p-1 border-4 border-gray-800 rounded-lg bg-white">
-          <Image src={assets.jeeChian} alt="Jee Chian" height={300} />
-        </div>
-
         <div className="pl-24 pt-5 max-w-4xl">
           <h1 className="flex justify-start w-full mt-0 text-2xl text-yellow-500">
             About Me
@@ -45,6 +41,9 @@ const AboutMe = () => {
             Invited by Head of Program to share insights with Certificate in Information Technology juniors, including
             (how to efficiently learn, using AI, and elective choosing).
           </p>
+        </div>
+                <div className="p-1 border-4 border-gray-800 rounded-lg bg-white">
+          <Image src={assets.jeeChian} alt="Jee Chian" height={300} />
         </div>
       </div>
     </motion.div>

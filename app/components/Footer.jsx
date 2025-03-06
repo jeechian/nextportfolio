@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link"; // Import the Link component
-import { iconSocial } from "../Asset/asset";
+import { iconSocial } from "../Assets/asset";
 
 
 
