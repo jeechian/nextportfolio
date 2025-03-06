@@ -7,7 +7,7 @@ import instagram_icon from "./icon/instagram_icon.png"
 import resume_icon from "./icon/resume_icon.png"
 
 
-import LB_idle from "./program/LB_idle.png"
+import LB_idle from "./program/LB_Idle.png"
 import LB_poster from "./program/LB_poster.png"
 import LB_poster2 from "./program/LB_poster2.png"
 import LB_title from "./program/LB_title.png"
