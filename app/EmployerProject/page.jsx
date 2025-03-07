@@ -28,7 +28,7 @@ const page = () => {
               <Image
                 src={ep.src}
                 alt={ep.description}
-                width={850}
+                width={750}
                 className="p-1 border-4 border-gray-800 rounded-lg bg-white"
               />
             </div>

@@ -8,11 +8,16 @@ import { motion } from "framer-motion";
 const ListRate = () => {
   const [ratings, setRatings] = useState([]); // Store the ratings
   const [filter, setFilter] = useState("All"); // Filter state to track the current filter
+  const [max, setMax] = useState(3); // To toggle between 3 comments and all comments
 
+  // Fetch ratings from the server
   const fetchRate = async () => {
-    const response = await axios.get("api/rating");
-    setRatings(response.data.ratings);
-    console.log(response.data.ratings);
+    try {
+      const response = await axios.get("api/rating");
+      setRatings(response.data.ratings);
+    } catch (error) {
+      console.error("Error fetching ratings:", error);
+    }
   };
 
   useEffect(() => {
@@ -25,6 +30,18 @@ const ListRate = () => {
     if (filter === "Disliked") return rating.liked === false;
     return true; // Show all ratings
   });
+
+  // Get the ratings to display based on the `max` value
+  const ratingsToDisplay = filteredRatings.slice(0, max);
+
+  // Toggle to show all or 3 ratings
+  const toggleShowMore = () => {
+    if (max === 3) {
+      setMax(filteredRatings.length); // Show all ratings
+    } else {
+      setMax(3); // Show only the 3 most recent ratings
+    }
+  };
 
   return (
     <motion.div
@@ -63,7 +80,7 @@ const ListRate = () => {
             </div>
 
             {/* Ratings List */}
-            {filteredRatings.map((rating) => (
+            {ratingsToDisplay.map((rating) => (
               <div
                 key={rating._id}
                 className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 sm:mb-5 sm:border-b-2 pb-4 sm:pb-0 border-b-2 sm:border-b-0"
@@ -95,6 +112,19 @@ const ListRate = () => {
                 </div>
               </div>
             ))}
+
+            {/* Toggle button to show more or less */}
+            {filteredRatings.length > 3 && (
+              <div className="flex justify-end bg:pr-5 md:pr-5">
+                <button
+                  onClick={toggleShowMore}
+                  className="mt-4 bg-black text-yellow-500 py-2 px-4 rounded-md ml-auto"
+                >
+                  {max === 3 ? "Show All Comments" : "Show Less"}
+                </button>
+              </div>
+
+            )}
           </div>
         )}
       </div>

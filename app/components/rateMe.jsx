@@ -107,14 +107,15 @@ const RateMe = () => {
                 className="border p-3 rounded-md min-h-[150px] text-lg"
               />
             </div>
+            <div>
 
-            <div className="flex justify-end w-full">
+            </div>
+            <div className="flex justify-end w-full gap-5">
               <motion.button
                 type="button"
                 onClick={toggleLike}
-                className={`${
-                  data.liked ? "bg-black" : "bg-gray-400"
-                } text-white py-3 px-5 rounded-md`}
+                className={`${data.liked ? "bg-black" : "bg-gray-400"
+                  } text-white py-3 px-5 h-[50px] rounded-md`}
                 whileTap={{ scale: 0.9 }} // Shrink slightly on click
                 whileHover={{ scale: 1.1 }} // Grow slightly on hover
               >
@@ -125,17 +126,19 @@ const RateMe = () => {
                   height={24}
                 />
               </motion.button>
+              <motion.button
+                type="submit"
+                className="bg-black text-yellow-500 font-bold py-3 px-5 rounded-md  w-[100px] h-[50px] self-end disabled:cursor-not-allowed"
+                whileHover={{ scale: 1.1 }} // Slight grow on hover
+                whileTap={{ scale: 0.95 }} // Shrink slightly on click
+              >
+                Submit
+              </motion.button>
             </div>
+
           </div>
 
-          <motion.button
-            type="submit"
-            className="bg-black text-yellow-500 font-bold py-3 px-5 rounded-md mt-4 sm:mt-2 max-w-[150px] self-end disabled:cursor-not-allowed"
-            whileHover={{ scale: 1.1 }} // Slight grow on hover
-            whileTap={{ scale: 0.95 }} // Shrink slightly on click
-          >
-            Submit
-          </motion.button>
+
         </form>
       </div>
 

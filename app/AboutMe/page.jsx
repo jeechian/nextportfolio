@@ -34,11 +34,13 @@ const AboutMe = () => {
             (how to efficiently learn, using AI, and elective choosing).
           </p>
         </div>
-
+        
         <div className="p-1 border-4 border-gray-800 rounded-lg bg-white flex justify-center items-center">
           <Image src={assets.jeeChian} alt="Jee Chian" height={300} />
         </div>
       </div>
+      
+      
     </motion.div>
   );
 };
