@@ -22,8 +22,8 @@ const Page = () => {
                     <div>
                         <h2 className="text-4xl font-bold">Poster</h2>
                         <div className="p-1 border-4 border-gray-800 rounded-lg bg-white">
-                            <Image src={gameDev[2].src} alt="title" width={800} />
-                            <Image src={gameDev[3].src} alt="title" />
+                            <Image src={gameDev[2].src} alt="title" width={800} className="border-1 border-black"/>
+                            <Image src={gameDev[3].src} alt="title" className="border-1 border-black"/>
                         </div>
                     </div>
 
@@ -39,11 +39,11 @@ const Page = () => {
                         </h3>
                         <h2 className="text-4xl font-bold pt-10">Title</h2>
                         <div className="p-1 border-4 border-gray-800 rounded-lg bg-white mb-4">
-                            <Image src={gameDev[1].src} alt="Title" width={800} height={450} />
+                            <Image src={gameDev[1].src} alt="Title" width={800} height={450} className="border-1 border-black"/>
                         </div>
                         <h2 className="text-4xl font-bold pt-10">Game Scene</h2>
                         <div className="p-1 border-4 border-gray-800 rounded-lg bg-white mb-4">
-                            <Image src={gameDev[0].src} alt="Game Scene" width={800} height={450} />
+                            <Image src={gameDev[0].src} alt="Game Scene" width={800} height={450} className="border-1 border-black"/>
                         </div>
                     </div>
                 </motion.div >
@@ -69,7 +69,7 @@ const Page = () => {
                     <div key={gameItem.name}>
                         <h2 className={`text-4xl font-bold ${gameItem.description === "" ? "pt-10" : ""}`}>{gameItem.description}</h2>
                         <div className="p-1 border-4 border-gray-800 rounded-lg bg-white ">
-                            <Image src={gameItem.src} alt={gameItem.name} width={450} height={450} />
+                            <Image src={gameItem.src} alt={gameItem.name} width={450} height={450} className="border-1 border-black"/>
                         </div>
                     </div>
                 ))}

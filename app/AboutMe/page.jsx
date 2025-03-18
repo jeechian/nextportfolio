@@ -36,13 +36,9 @@ const AboutMe = () => {
         </div>
         
         
-        <motion.div
-          className="rounded-lg flex justify-center items-center"
-          animate={{  scale: [1.02,1,1.02], y: ["0px", "-10px", "0px"] }}
-          transition={{ duration: 2, ease: "easeInOut", repeat: Infinity }}
-        >
-          <Image src={assets.jeeChian} alt="Jee Chian" width={450} />
-        </motion.div>
+        <div className="p-1 border-4 border-gray-800 rounded-lg bg-white flex justify-center items-center">
+          <Image src={assets.jeeChian} alt="Jee Chian" height={300}  className="border-1 border-black"/>
+        </div>
         </div>
       
       

@@ -25,12 +25,15 @@ const page = () => {
           {EP[2].map((ep) => (
             <div key={ep.name} className="flex flex-col items-center">
               <h2 className="text-4xl font-bold text-left w-full">{ep.description}</h2>
-              <Image
-                src={ep.src}
-                alt={ep.description}
-                width={750}
-                className="p-1 border-4 border-gray-800 rounded-lg bg-white"
-              />
+              <div className="p-1 border-4 border-gray-800 rounded-lg bg-white ">
+                <Image
+                  src={ep.src}
+                  alt={ep.description}
+                  width={650}
+                  className="border-1 border-black"
+                />
+              </div>
+
             </div>
           ))}
         </div>
@@ -44,21 +47,21 @@ const page = () => {
             <strong className="text-yellow-500">~2024 DEC</strong>
           </p>
 
-          <div className="flex justify-center mb-5">
+          <div className="flex justify-center mb-5 p-1 border-4 border-gray-800 rounded-lg bg-white">
             <Image
               src={EP[0].src}
               alt="profile"
-              className="p-1 border-4 border-gray-800 rounded-lg bg-white"
+              className="border-1 border-black"
               width={600}
               height={400}
             />
           </div>
 
-          <div className="flex justify-center mb-5">
+          <div className="flex justify-center mb-5 p-1 border-4 border-gray-800 rounded-lg bg-white">
             <Image
               src={EP[1].src}
               alt="profile"
-              className="p-1 border-4 border-gray-800 rounded-lg bg-white"
+              className="border-1 border-black"
               width={600}
               height={400}
             />
@@ -66,13 +69,16 @@ const page = () => {
 
           <div className="flex flex-col items-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-center w-full">{EP[3].description}</h2>
-            <Image
-              src={EP[3].src}
-              alt={EP[3].description}
-              className="p-1 border-4 border-gray-800 rounded-lg bg-white"
-              width={600}
-              height={400}
-            />
+            <div className="p-1 border-4 border-gray-800 rounded-lg bg-white">
+              <Image
+                src={EP[3].src}
+                alt={EP[3].description}
+                className="border-1 border-black"
+                width={600}
+                height={400}
+              />
+            </div>
+
           </div>
         </div>
       </motion.div>

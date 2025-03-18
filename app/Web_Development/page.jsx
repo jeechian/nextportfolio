@@ -35,6 +35,7 @@ const Page = () => {
                 src={web.src}
                 alt=""
                 layout="responsive"
+                className="border-1 border-black"
               />
             </div>
           </div>
