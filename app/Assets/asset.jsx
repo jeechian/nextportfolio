@@ -1,4 +1,4 @@
-import jeeChian from "./JeeChian.jpg";
+import jeeChian from "./JeeChian.png";
 import unlike from "./icon/heart_2.png"
 import like from "./icon/heart_1.png"
 import facebook_icon from "./icon/facebook_icon.png"
