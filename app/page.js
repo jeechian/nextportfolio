@@ -3,7 +3,7 @@ import AboutMe from "./AboutMe/page";
 import Intro from "./components/Intro";
 import ListRate from "./components/listRate";
 import Ending from "./components/Ending";
-import Skill from "./components/skill";
+import Skill from "./components/Skill";
 import ProjectDisplay from "./ProjectDisplay/page";
 
 
