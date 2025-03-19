@@ -65,27 +65,26 @@ const ListRate = () => {
         <button
           onClick={handlePrevious}
           disabled={startIndex === 0}
-          className="absolute left-4 top-[55%] transform -translate-y-1/2 p-3 bg-gray-200 rounded-full disabled:opacity-50"
+          className="absolute left-8 sm:left-4 top-[55%] transform -translate-y-1/2 md:p-3 lg:p-3 sm:p-1 rounded-full disabled:opacity-50"
         >
           <Image src={assets.left} alt="Previous" width={24} height={24} />
         </button>
 
-        {/* ✅ Use flex on small screens, grid on medium+ screens */}
-        <div className="w-[80%] p-5 mx-auto flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {/* ✅ Increased padding for better spacing */}
+        <div className="w-[80%] px-6 sm:px-10 py-5 mx-auto flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {ratings.slice(startIndex, startIndex + itemsPerPage).map((rating, index) => (
             <motion.div
               key={rating._id}
-              initial={{ opacity: 0, filter: "blur(10px)" }} // Start blurred and invisible
-              whileInView={{ opacity: 1, filter: "blur(0px)" }} // Transition to clear
-              animate={{ y: index % 2 === 0 ? [10, 0, 10] : [0, 10, 0] }} // Floating effect
+              initial={{ opacity: 0, filter: "blur(10px)" }} 
+              whileInView={{ opacity: 1, filter: "blur(0px)" }} 
+              animate={{ y: index % 2 === 0 ? [10, 0, 10] : [0, 10, 0] }} 
               transition={{
-                opacity: { duration: 0.8, ease: "easeOut" }, // Fade-in effect
-                filter: { duration: 0.8, ease: "easeOut" }, // Blur-to-clear effect
-                y: { duration: 1.4, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" }, // Floating animation
+                opacity: { duration: 0.8, ease: "easeOut" }, 
+                filter: { duration: 0.8, ease: "easeOut" }, 
+                y: { duration: 1.4, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" }, 
               }}
               className="flex flex-col items-center bg-gray-100 p-4 rounded-lg shadow-md w-[90%] sm:w-[80%] md:w-[100%] mx-auto"
             >
-
               <Image
                 src={rating.liked ? assets.like : assets.unlike}
                 alt={rating.liked ? "Liked" : "Unlike"}
@@ -104,7 +103,7 @@ const ListRate = () => {
         <button
           onClick={handleNext}
           disabled={startIndex + itemsPerPage >= ratings.length}
-          className="absolute right-4 top-[55%] transform -translate-y-1/2 p-3 bg-gray-200 rounded-full disabled:opacity-50"
+          className="absolute right-8 sm:right-4 top-[55%] transform -translate-y-1/2  md:p-3 lg:p-3 sm:p-1 rounded-full disabled:opacity-50"
         >
           <Image src={assets.right} alt="Next" width={24} height={24} />
         </button>

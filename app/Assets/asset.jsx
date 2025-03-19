@@ -14,6 +14,7 @@ import Shoes from "./icon/shoes.png"
 import Axe2 from "./icon/axe2.png"
 import Closure2 from "./icon/closure2.png"
 import Shoes2 from "./icon/shoes2.png"
+import Home from "./icon/home.png"
 
 import LB_idle from "./program/LB0.png" 
 import LB_poster from "./program/LB_poster.png"
@@ -79,6 +80,7 @@ export const assets = {
   Axe2,
   Closure2,
   Shoes2,
+  Home
 };
 export const gameDev = [
   { name: "LB_idle", src: LB_idle },

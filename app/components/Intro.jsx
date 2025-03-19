@@ -19,7 +19,8 @@ const Intro = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-2xl text-yellow-500 p-5">
+        className="text-xl md:text-2xl text-yellow-500 p-5"
+      >
         Effortless Digital Solutions for Your Success 
       </motion.h2>
       <motion.h1
@@ -27,7 +28,8 @@ const Intro = () => {
         whileInView={{ opacity: 1, x: 0, rotate: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-4xl">
+        className="text-2xl md:text-4xl"
+      >
         Get<strong className="text-yellow-500"> INSTANT </strong> access to powerful digital solutions
       </motion.h1>
       <motion.h1
@@ -35,48 +37,59 @@ const Intro = () => {
         whileInView={{ opacity: 1, x: 0, rotate: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="text-4xl pt-3">
+        className="text-2xl md:text-4xl pt-3"
+      >
         that save you <strong className="text-yellow-500">time & effort! 🚀</strong>
       </motion.h1>
 
-      <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mt-8 gap-6">
+      <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl mt-8 gap-6">
         {/* Left side - Image (60%) */}
         <motion.div 
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-        className="flex-1 basis-[60%] flex justify-center">
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="w-full md:w-3/5 flex justify-center"
+        >
           <Image
             src={assets.IT}
             alt="Digital Solutions"
-            width={450}
-            height={450}
-            className="rounded-lg shadow-lg"
+            width={400}
+            height={400}
+            className="rounded-lg shadow-lg w-full max-w-sm md:max-w-md lg:max-w-lg"
           />
         </motion.div>
 
         {/* Right side - Features (40%) */}
-        <div className="flex-1 basis-[40%] text-left">
+        <div className="w-full md:w-2/5 text-left px-4">
           <motion.h2 
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-xl">✅ Fast, Responsive & Secure</motion.h2>
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-lg md:text-xl"
+          >
+            ✔  Fast, Responsive & Secure
+          </motion.h2>
           <motion.h2 
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="text-xl pt-10">✅ Custom-Designed to Fit Your Needs</motion.h2>
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="text-lg md:text-xl pt-6"
+          >
+            ✔  Custom-Designed to Fit Your Needs
+          </motion.h2>
           <motion.h2 
-           initial={{ opacity: 0, y: 100 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-xl pt-10">✅ Optimized for Performance & Profitability</motion.h2>
-          <div className="pt-10">
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-lg md:text-xl pt-6"
+          >
+            ✔  Optimized for Performance & Profitability
+          </motion.h2>
+          <div className="pt-6 pb-10 pl-10">
             <motion.button
               onClick={scrollToAboutMe}
               initial={{ opacity: 0, y: 100 }}
@@ -85,7 +98,7 @@ const Intro = () => {
               transition={{ duration: 1, ease: "easeOut" }}
               whileTap={{ scale: 0.9 }}
               whileHover={{ scale: 1.1 }}
-              className="bg-yellow-500 border p-2 rounded-xl text-white text-2xl pl-10 pr-10 hover:bg-sky-700"
+              className="bg-yellow-500 border p-2 rounded-xl text-white text-lg md:text-2xl px-6 md:px-10 hover:bg-yellow-400"
             >
               Learn More About Me
             </motion.button>

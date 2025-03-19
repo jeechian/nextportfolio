@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="flex justify-between items-center">
         <div className="flex flex-col gap-4 sm:flex-row sm:gap-8 text-white">
           {/* Left Side - Paragraphs */}
-          <p className="flex-1 text-left pl-10 text-lg text-yellow-500">Here is Some Information About Me.</p>
+          <p className="flex-1 text-left pl-10 text-lg text-yellow-500 hidden sm:block">Here is Some Information About Me.</p>
         </div>
 
         {/* Right Side - Social Media Icons and Resume */}

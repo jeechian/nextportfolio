@@ -6,6 +6,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const page = () => {
   const [data, setData] = useState({
@@ -49,7 +50,7 @@ const page = () => {
 
   return (
     <motion.div
-      className="w-full p-6 sm:p-10 bg-slate-900 flex flex-col items-center"
+      className="w-full min-h-screen flex flex-col items-center justify-center bg-slate-900 p-6 sm:p-10"
       initial={{ opacity: 0, x: "blur(10px)" }}
       whileInView={{ opacity: 1, filter: "blur(0px)" }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -91,6 +92,20 @@ const page = () => {
                 className="border p-3 w-full rounded-md"
               />
             </div>
+            <div className="hidden sm:flex justify-start pt-8 w-full gap-5">
+              <Link href={"/"}>
+                <motion.button
+                  type="button"
+                  className="border border-black text-yellow-500 font-bold py-3 px-5 rounded-md w-[120px] h-[50px] flex items-center justify-center gap-2 disabled:cursor-not-allowed"
+                  whileHover={{ scale: 1.1 }} // Slight grow on hover
+                  whileTap={{ scale: 0.95 }} // Shrink slightly on click
+                >
+                  <Image src={assets.Home} alt="Home Icon" width={24} height={24} />
+                  Home
+                </motion.button>
+              </Link>
+            </div>
+
           </div>
 
           <div className="flex flex-col gap-5 w-full sm:w-[65%] pl-0 sm:pl-10">
@@ -110,7 +125,23 @@ const page = () => {
             <div>
 
             </div>
-            <div className="flex justify-end w-full gap-5">
+
+            <div className="flex justify-end w-full gap-5 ">
+              <div className="lg:hidden md:hidden">
+                <Link href={"/"}>
+                  <motion.button
+                    type="button"
+                    className="border border-black text-yellow-500 font-bold py-3 px-5 rounded-md w-[120px] h-[50px] flex items-center justify-center gap-2 disabled:cursor-not-allowed"
+                    whileHover={{ scale: 1.1 }} // Slight grow on hover
+                    whileTap={{ scale: 0.95 }} // Shrink slightly on click
+                  >
+                    <Image src={assets.Home} alt="Home Icon" width={24} height={24} />
+                    Home
+                  </motion.button>
+                </Link>
+              </div>
+
+
               <motion.button
                 type="button"
                 onClick={toggleLike}

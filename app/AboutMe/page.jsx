@@ -80,7 +80,7 @@ const AboutMe = () => {
                 transition={{ duration: 1, ease: "easeOut" }}
                 whileTap={{ scale: 0.9 }}
                 whileHover={{ scale: 1.1 }}
-                className="bg-yellow-500 border p-2 rounded-xl text-white text-2xl pl-10 pr-10 hover:bg-sky-700"
+                className="bg-yellow-500 border p-2 rounded-xl text-white text-2xl pl-10 pr-10 hover:bg-yellow-400"
                 
               >
                 Rate Me
@@ -100,7 +100,7 @@ const AboutMe = () => {
           <Image
             src={assets.jeeChian}
             alt="Jee Chian"
-            height={400}
+            height={300}
             className="border-1 border-black"
           />
         </motion.div>

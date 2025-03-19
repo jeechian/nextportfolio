@@ -10,6 +10,7 @@ import ProjectDisplay from "./ProjectDisplay/page";
 export default function Home() {
   return (
     <>
+    
       <Intro/>
       <Skill/>
       <div id="about-me">

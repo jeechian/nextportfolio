@@ -13,14 +13,13 @@ const Page = () => {
       <h1 className="flex justify-center w-full mt-0 text-2xl text-yellow-500">
         Web Development
       </h1>
-      <h1 className="flex justify-center w-full mt-0 text-4xl font-bold">
+      <h1 className="flex justify-center w-full text-center text-4xl font-bold">
         The Puppet Shoes
       </h1>
-      <p className="space-x-2 flex justify-center w-full mt-5">
-        Developed a website to sell shoes using HTML, CSS, and JavaScript.
-        Designed an intuitive user interface to enhance the online shopping
-        experience. <br /><strong className="text-yellow-500">~2022 AUG</strong>
-      </p>
+      <p className="flex flex-wrap justify-center w-full mt-5 text-center">
+  <span>Developed a website to sell shoes using HTML, CSS, and JavaScript. Designed an intuitive user interface to enhance the online shopping experience.</span>
+  <span className="w-full sm:w-auto text-yellow-500 font-bold pl-2 sm:pl-5">~2022 AUG</span>
+</p>
       <motion.div className="gap-12 pt-10 grid lg:grid-cols-2 sm:grid-cols-1 "
         initial={{ opacity: 0, x: "blur(10px) " }} // Start off-screen to the left
         whileInView={{ opacity: 1, filter: "blur(0px)" }} // Animate when in view
