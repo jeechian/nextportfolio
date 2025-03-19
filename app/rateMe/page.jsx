@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { motion } from "framer-motion";
 
-const RateMe = () => {
+const page = () => {
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -128,7 +128,7 @@ const RateMe = () => {
               </motion.button>
               <motion.button
                 type="submit"
-                className="bg-black text-yellow-500 font-bold py-3 px-5 rounded-md  w-[100px] h-[50px] self-end disabled:cursor-not-allowed"
+                className="bg-black text-yellow-500 font-bold py-3 px-5 rounded-md  w-[100px] h-[50px] self-end disabled:cursor-not-allowed "
                 whileHover={{ scale: 1.1 }} // Slight grow on hover
                 whileTap={{ scale: 0.95 }} // Shrink slightly on click
               >
@@ -157,4 +157,4 @@ const RateMe = () => {
   );
 };
 
-export default RateMe;
+export default page;

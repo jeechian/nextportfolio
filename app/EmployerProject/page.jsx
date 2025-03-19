@@ -29,7 +29,7 @@ const page = () => {
                 <Image
                   src={ep.src}
                   alt={ep.description}
-                  width={650}
+                  width={450}
                   className="border-1 border-black"
                 />
               </div>
@@ -52,7 +52,7 @@ const page = () => {
               src={EP[0].src}
               alt="profile"
               className="border-1 border-black"
-              width={600}
+              width={450}
               height={400}
             />
           </div>
@@ -62,7 +62,7 @@ const page = () => {
               src={EP[1].src}
               alt="profile"
               className="border-1 border-black"
-              width={600}
+              width={450}
               height={400}
             />
           </div>
@@ -74,7 +74,7 @@ const page = () => {
                 src={EP[3].src}
                 alt={EP[3].description}
                 className="border-1 border-black"
-                width={600}
+                width={450}
                 height={400}
               />
             </div>

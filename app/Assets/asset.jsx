@@ -5,7 +5,15 @@ import facebook_icon from "./icon/facebook_icon.png"
 import email_icon from "./icon/email_icon.png"
 import instagram_icon from "./icon/instagram_icon.png"
 import resume_icon from "./icon/resume_icon.png"
-
+import left from"./icon/left.png"
+import right from "./icon/right.png"
+import IT from "./IT.png"
+import Axe from "./icon/axe.png"
+import Closure from "./icon/closure.png"
+import Shoes from "./icon/shoes.png"
+import Axe2 from "./icon/axe2.png"
+import Closure2 from "./icon/closure2.png"
+import Shoes2 from "./icon/shoes2.png"
 
 import LB_idle from "./program/LB0.png" 
 import LB_poster from "./program/LB_poster.png"
@@ -51,11 +59,6 @@ import EP1 from "./program/EP1.png"
 import EP2 from "./program/EP2.png"
 import EP3 from "./program/EP3.png"
 
-export const program_page = [
-  { name: "Game Development", link: "/Programme" },
-  { name: "Employer Project", link: "/EmployerProject" },
-  { name: "Web Development", link: "/Web_Development" }
-]
 export const iconSocial = [
   { name: "Facebook", link: "https://www.facebook.com/jeechian.ng", src: facebook_icon },
   { name: "Instagram", link: "https://www.instagram.com/jeechian__/", src: instagram_icon },
@@ -67,6 +70,15 @@ export const assets = {
   jeeChian,
   unlike,
   like,
+  left,
+  right,
+  IT,
+  Axe,
+  Closure,
+  Shoes,
+  Axe2,
+  Closure2,
+  Shoes2,
 };
 export const gameDev = [
   { name: "LB_idle", src: LB_idle },
