@@ -1,8 +1,9 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import Link from "next/link"; // Import the Link component
 import { iconSocial } from "../Assets/asset";
-
+import { motion } from "framer-motion";
 
 
 const Footer = () => {
@@ -11,7 +12,12 @@ const Footer = () => {
       <div className="flex justify-between items-center">
         <div className="flex flex-col gap-4 sm:flex-row sm:gap-8 text-white">
           {/* Left Side - Paragraphs */}
-          <p className="flex-1 text-left pl-10 text-lg text-yellow-500 hidden sm:block">Here is Some Information About Me.</p>
+          <motion.p
+            initial={{ color: "#ffffff" }}
+            whileInView={{ color: "#eab308" }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="flex-1 text-left pl-10 text-lg hidden sm:block">📢 Let’s build something amazing together! </motion.p>
         </div>
 
         {/* Right Side - Social Media Icons and Resume */}
@@ -24,14 +30,18 @@ const Footer = () => {
                 key={iconData.name}
                 className="flex flex-col items-center"
               >
-                <div className="relative mb-1">
+                <motion.div
+                  initial={{ boxShadow: "0px 0px 0px rgba(255, 255, 255, 0)" }}
+                  whileHover={{ boxShadow: "0px 0px 20px rgba(255, 255, 255, 0.8)" }}
+                  transition={{ duration: 0.5 }}
+                  className="relative mb-1">
                   <Image
                     src={iconData.src}
                     alt={`${iconData.name} Icon`}
                     width={40}
                     height={40}
                   />
-                </div>
+                </motion.div>
               </Link>
             ) : (
               // Resume Link - This will trigger a download
@@ -41,7 +51,11 @@ const Footer = () => {
                 download
                 className="flex flex-col items-center"
               >
-                <div className="relative mb-1">
+                <motion.div
+                  initial={{ boxShadow: "0px 0px 0px rgba(255, 255, 255, 0)" }}
+                  whileHover={{ boxShadow: "0px 0px 20px rgba(255, 255, 255, 0.8)" }}
+                  transition={{ duration: 0.5 }}
+                  className="relative mb-1">
                   <Image
                     src={iconData.src}
                     alt={`${iconData.name} Icon`}
@@ -49,7 +63,7 @@ const Footer = () => {
                     height={40}
 
                   />
-                </div>
+                </motion.div>
               </a>
             )
           ))}

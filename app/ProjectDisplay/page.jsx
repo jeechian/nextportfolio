@@ -21,7 +21,7 @@ const ProjectDisplay = () => {
       useEffect(() => {
         const updateSize = () => {
           if (window.innerWidth < 640) {
-            setSize(37);
+            setSize(38);
           } else {
             setSize(50);
           }

@@ -5,12 +5,21 @@ const Ending = () => {
     return (
         <div className=" bg-slate-950 text-white text-center pt-10">
             
-            
-            <h2 className="p-3">
-                💡 Whether you're launching a startup, scaling a business, or enhancing security, we’ve got the perfect solution for you.
+            <h2  className="flex justify-center w-full mt-0 text-2xl text-yellow-500">
+                Achivement
+            </h2>
+            <h1 className="flex justify-center w-full mt-0 text-4xl font-bold">
+            Alumni Sharing Event Speaker
+            </h1>
+            <p className="space-x-2 text-base sm:text-lg p-4">
+            Invited by Ms. Norayu, Head of Program, to share insights and
+            experiences with Certificate in Information Technology students.
+            </p>
+            <h2 className="pt-10">
+                
             </h2>
             <h2 className="p-3">
-                📢 Let’s build something amazing together!
+                
             </h2>
         </div>
     )

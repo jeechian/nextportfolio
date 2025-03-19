@@ -14,90 +14,168 @@ const Test = () => {
         Portfolio Motion Effects
       </motion.h1>
 
-      {/* Slide in from Left */}
+      {/* Flip Animation */}
       <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ rotateY: 180, opacity: 0 }}
+        whileInView={{ rotateY: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="p-5 bg-gray-800 rounded-xl shadow-lg"
+      >
+        Flip Animation
+      </motion.div>
+
+      {/* Skew Effect */}
+      <motion.div
+        initial={{ skewX: -10, opacity: 0 }}
+        whileInView={{ skewX: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="p-5 bg-gray-800 rounded-xl shadow-lg"
+      >
+        Skew Effect
+      </motion.div>
+
+      {/* Elastic Bounce */}
+      <motion.div
+        initial={{ scale: 0.5, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ type: "spring", stiffness: 100 }}
+        className="p-5 bg-gray-800 rounded-xl shadow-lg"
+      >
+        Elastic Bounce
+      </motion.div>
+
+      {/* Expanding Width */}
+      <motion.div
+        initial={{ width: "50%", opacity: 0 }}
+        whileInView={{ width: "100%", opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="p-5 bg-gray-800 rounded-xl shadow-lg"
+      >
+        Expanding Width
+      </motion.div>
+
+      {/* Color Transition */}
+      <motion.div
+        initial={{ backgroundColor: "#1F2937" }}
+        whileInView={{ backgroundColor: "#6366F1" }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        className="p-5 rounded-xl shadow-lg"
+      >
+        Color Transition
+      </motion.div>
+
+      {/* Wave Effect */}
+      <motion.div
+        animate={{ x: [0, 20, -20, 0] }}
+        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        className="p-5 bg-gray-800 rounded-xl shadow-lg"
+      >
+        Wave Effect
+      </motion.div>
+
+      {/* 3D Tilt Effect */}
+      <motion.div
+        whileHover={{ rotateX: 15, rotateY: 15 }}
+        transition={{ duration: 0.3 }}
+        className="p-5 bg-gray-800 rounded-xl shadow-lg"
+      >
+        3D Tilt Effect (Hover)
+      </motion.div>
+
+      {/* Pulse Effect */}
+      <motion.div
+        animate={{ scale: [1, 1.05, 1] }}
+        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        className="p-5 bg-gray-800 rounded-xl shadow-lg"
+      >
+        Pulse Effect
+      </motion.div>
+
+
+
+      {/* Shaking Effect */}
+      <motion.div
+        animate={{ x: [-10, 10, -10, 10, 0] }}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+        className="p-5 bg-gray-800 rounded-xl shadow-lg"
+      >
+        Shaking Effect
+      </motion.div>
+
+      {/* Stretching Effect */}
+      <motion.div
+        initial={{ scaleY: 0.5, opacity: 0 }}
+        whileInView={{ scaleY: 1, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="p-5 bg-gray-800 rounded-xl shadow-lg"
       >
-        Slide in from Left
+        Stretching Effect
       </motion.div>
 
-      {/* Slide in from Bottom */}
+      {/* Scroll-Based Scaling */}
       <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="p-5 bg-gray-800 rounded-xl shadow-lg"
-      >
-        Slide in from Bottom
-      </motion.div>
-
-      {/* Blur to Clear with Floating Effect */}
-      <motion.div
-        initial={{ opacity: 0, filter: "blur(10px)" }}
-        whileInView={{ opacity: 1, filter: "blur(0px)" }}
-        animate={{ y: [10, 0, 10] }}
-        transition={{
-          opacity: { duration: 0.8, ease: "easeOut" },
-          filter: { duration: 0.8, ease: "easeOut" },
-          y: { duration: 1.4, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" },
-        }}
-        className="p-5 bg-gray-800 rounded-xl shadow-lg"
-      >
-        Blur to Clear with Floating Effect
-      </motion.div>
-
-      {/* Scale In (Zoom Effect) */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
+        whileInView={{ scale: 1.2 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="p-5 bg-gray-800 rounded-xl shadow-lg"
       >
-        Scale In (Zoom Effect)
+        Scroll-Based Scaling
       </motion.div>
 
-      {/* Rotate In with Slide */}
+      {/* Wobble Effect */}
       <motion.div
-        initial={{ opacity: 0, x: -100, rotate: -10 }}
-        whileInView={{ opacity: 1, x: 0, rotate: 0 }}
+        whileHover={{ rotate: [0, -5, 5, 0] }}
+        transition={{ duration: 0.4 }}
+        className="p-5 bg-gray-800 rounded-xl shadow-lg"
+      >
+        Wobble Effect (Hover)
+      </motion.div>
+
+      {/* Glowing Border Effect */}
+      <motion.div
+        initial={{ boxShadow: "0px 0px 0px rgba(255, 255, 255, 0)" }}
+        whileHover={{ boxShadow: "0px 0px 20px rgba(255, 255, 255, 0.8)" }}
+        transition={{ duration: 0.5 }}
+        className="p-5 bg-gray-800 rounded-xl shadow-lg"
+      >
+        Glowing Border (Hover)
+      </motion.div>
+
+      {/* Flipping from Top */}
+      <motion.div
+        initial={{ rotateX: -90, opacity: 0 }}
+        whileInView={{ rotateX: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="p-5 bg-gray-800 rounded-xl shadow-lg"
       >
-        Rotate In with Slide
+        Flipping from Top
       </motion.div>
 
-      {/* Staggered Fade-in for List */}
-      <motion.ul
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={{
-          hidden: { opacity: 0 },
-          visible: {
-            opacity: 1,
-            transition: { staggerChildren: 0.3 },
-          },
-        }}
-        className="space-y-4"
+      {/* Pop Out (Button Press Animation) */}
+      <motion.div
+        whileTap={{ scale: 0.9 }}
+        className="p-5 bg-gray-800 rounded-xl shadow-lg"
       >
-        {["Item 1", "Item 2", "Item 3"].map((item, index) => (
-          <motion.li
-            key={index}
-            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-            transition={{ duration: 0.5 }}
-            className="p-3 bg-gray-700 rounded-lg"
-          >
-            {item}
-          </motion.li>
-        ))}
-      </motion.ul>
+        Pop Out (Click Me)
+      </motion.div>
+
+      {/* Fading Borders Effect */}
+      <motion.div
+        initial={{ borderColor: "rgba(255, 255, 255, 0)" }}
+        whileInView={{ borderColor: "rgba(255, 255, 255, 1)" }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="p-5 border-4 border-transparent rounded-xl shadow-lg"
+      >
+        Fading Borders Effect
+      </motion.div>
     </div>
   );
 };
