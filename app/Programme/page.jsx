@@ -135,7 +135,7 @@ const Page = () => {
                             initial={{ opacity: 0, y: 100, x: -50 }}
                             whileInView={{ opacity: 1, y: 0, x: 0 }}
                             viewport={{ once: true }} // Ensures it only animates once when in view
-                            transition={{ duration: 0.8 + index * 0.2, ease: "easeOut" }} // Incrementing duration
+                            transition={{ duration: 0.8 + (index%3) * 0.2, ease: "easeOut" }} // Incrementing duration
                             className="p-1 border-4 border-gray-800 rounded-lg bg-white"
                         >
                             <Image src={gameItem.src} alt={gameItem.name} width={450} height={450} className="border-1 border-black" />

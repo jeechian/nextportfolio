@@ -56,11 +56,11 @@ const Page = () => {
 
           >
             <motion.h2 
-            animate={{ x: [0, 10, -10, 0] }}
+            animate={{ x: [0, 5, -5, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             className="text-4xl font-bold">{web.description}</motion.h2>
             <motion.div 
-                    animate={{ x: [0, 20, -20, 0] }}
+                    animate={{ x: [0, 10, -10, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             className="p-1 border-4 border-gray-800 rounded-lg bg-white">
               <Image

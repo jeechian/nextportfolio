@@ -8,13 +8,13 @@ import { motion } from "framer-motion";
 
 const page = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-10 bg-slate-950 text-white ">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-slate-950 text-white ">
       <motion.h1
         initial={{ rotateX: 180, opacity: 0 }}
         whileInView={{ rotateX: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="text-2xl text-center w-full text-yellow-500">
+        className="text-2xl text-center w-full text-yellow-500 pt-10">
         Employer Project
       </motion.h1>
       <motion.h1

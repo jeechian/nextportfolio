@@ -49,8 +49,8 @@ const ProjectDisplay = () => {
                 ))}
             </div>
 
-            <div className="flex justify-center items-center w-full bg-white border-b border-white">
-            <div className="w-[95%]">
+            <div className="flex justify-center items-center w-full">
+            <div className="w-[95%] pb-10">
                 {projects.find((project) => project.name === selectedProgram)?.component}
             </div>
             </div>

@@ -17,10 +17,11 @@ export default function Home() {
       <AboutMe/>
       </div>
       <ListRate/>
+      <Ending/>
       <div id="programme">
       <ProjectDisplay/>
       </div>
-      <Ending/>
+      
     </>
   );
 }
