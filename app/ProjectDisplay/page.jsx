@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react"; // Import useRef
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import GameDev from "../Programme/page";
 import EmployerProject from "../EmployerProject/page";
@@ -23,7 +23,7 @@ const ProjectDisplay = () => {
   const [selectedProgram, setSelectedProgram] = useState("Game Development");
   const [size, setSize] = useState(50);
   const [more, setMore] = useState(false);
-  const projectRef = useRef(null); // Create a ref for the component
+  const projectRef = useRef(null);
 
   useEffect(() => {
     const updateSize = () => {
@@ -38,7 +38,7 @@ const ProjectDisplay = () => {
   const handleSwitchProject = (newProject) => {
     setSelectedProgram(newProject);
     setMore(false);
-    projectRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }); // Scroll to component
+    projectRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const SelectedComponent = projects.find((project) => project.name === selectedProgram)?.component;
@@ -80,8 +80,15 @@ const ProjectDisplay = () => {
 
         {/* Show More / Show Less Button */}
         <motion.button
-          className={` pl-5 pr-5 pt-3 pb-3 rounded-xl ${selectedProgram=="Employer Project"?"bg-white text-white":"bg-black text-yellow-500"}`}
-          onClick={() => setMore(!more)}
+          className={`pl-5 pr-5 pt-3 pb-3 rounded-xl ${selectedProgram === "Employer Project" ? "bg-white text-white" : "bg-black text-yellow-500"}`}
+          onClick={() => {
+            if (more) {
+              setMore(false);
+              projectRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+            } else {
+              setMore(true);
+            }
+          }}
           whileTap={{ scale: 0.9 }}
           whileHover={{ scale: 1.1 }}
         >

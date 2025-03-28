@@ -20,13 +20,13 @@ const Intro = () => {
 
             <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20 w-full max-w-7xl relative z-10">
                 {/* Left Content */}
-                <div className="md:pl-24 pt-5 max-w-full md:max-w-4xl text-center md:text-left">
+                <div className="md:pl-10 pt-5 max-w-full md:max-w-4xl text-center md:text-left">
                     <motion.h1
                         initial={{ opacity: 0, x: -100 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="text-2xl md:text-3xl text-yellow-500"
+                        className="text-2xl md:text-4xl text-yellow-500"
                     >
                         About Me
                     </motion.h1>
@@ -35,7 +35,7 @@ const Intro = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1, ease: "easeOut" }}
-                        className="mt-0 text-3xl md:text-4xl font-bold"
+                        className="mt-0 text-3xl md:text-5xl font-bold"
                     >
                         NG <br /> JEE CHIAN
                     </motion.h1>
@@ -44,7 +44,7 @@ const Intro = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1.2, ease: "easeOut" }}
-                        className="text-sm md:text-base"
+                        className="text-sm md:text-lg"
                     >
                         Diploma in Computer Science student from INTI International College Subang
                     </motion.p>
@@ -56,7 +56,7 @@ const Intro = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="text-2xl font-bold"
+                        className="text-3xl font-bold"
                     >
                         Contact Me
                     </motion.h2>
@@ -78,8 +78,8 @@ const Intro = () => {
                                     <Image
                                         src={iconData.src}
                                         alt={`${iconData.name} Icon`}
-                                        width={30}
-                                        height={30}
+                                        width={35}
+                                        height={35}
                                     />
                                 </motion.div>
                             </Link>
@@ -102,7 +102,7 @@ const Intro = () => {
                                 transition={{ duration: 1, ease: "easeOut" }}
                                 whileTap={{ scale: 0.9 }}
                                 whileHover={{ scale: 1.1 }}
-                                className="bg-yellow-500 border p-2 rounded-xl text-white text-xl px-5 hover:bg-yellow-400"
+                                className="bg-yellow-500 border p-2 rounded-xl text-white text-xl px-5 hover:bg-yellow-400 md:text-3xl"
                             >
                                 Rate Me
                             </motion.button>
@@ -115,7 +115,7 @@ const Intro = () => {
                             transition={{ duration: 1, ease: "easeOut" }}
                             whileTap={{ scale: 0.9 }}
                             whileHover={{ scale: 1.1 }}
-                            className="border p-2 border-yellow-500 hover:border-yellow-400 rounded-xl text-yellow-500 text-xl px-5 hover:text-yellow-400"
+                            className="border p-2 border-yellow-500 hover:border-yellow-400 rounded-xl text-yellow-500 text-xl px-5 hover:text-yellow-400 md:text-3xl"
                         >
                             <a href={"/NgJeeChian_Resume.pdf"} download className="flex items-center gap-2">
                                 <Image src={assets.resume_icon} alt="Resumé" width={30} height={30} />
@@ -147,7 +147,7 @@ const Intro = () => {
                                 <Image
                                     src={sampleData.src}
                                     alt={`${sampleData.name} Icon`}
-                                    width={300}
+                                    width={330}
                                     className="border border-yellow-500 rounded-xl"
                                 />
                             </div>
