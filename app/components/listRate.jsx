@@ -53,7 +53,7 @@ const ListRate = () => {
 
   return (
     <motion.div
-      className="w-full p-6 sm:p-10 bg-slate-900 flex flex-col items-center"
+      className="w-full p-6 sm:p-10 flex flex-col items-center"
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -84,7 +84,7 @@ const ListRate = () => {
             {ratings.slice(startIndex, startIndex + itemsPerPage).map((rating, index) => (
               <motion.div
                 key={rating._id}
-                initial={{ opacity: 0, filter: "blur(10px)" }}
+                initial={{ x:0,opacity: 0, filter: "blur(10px)" }}
                 whileInView={{ opacity: 1, filter: "blur(0px)" }}
                 animate={{ y: index % 2 === 0 ? [10, 0, 10] : [0, 10, 0] }}
                 transition={{
@@ -92,7 +92,7 @@ const ListRate = () => {
                   filter: { duration: 0.8, ease: "easeOut" },
                   y: { duration: 1.4, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" },
                 }}
-                className="flex flex-col items-center bg-gray-100 p-4 rounded-lg shadow-md w-[90%] sm:w-[80%] md:w-[100%] mx-auto"
+                className="flex flex-col items-center border border-black bg-gray-100 p-4 rounded-lg shadow-md w-[90%] sm:w-[80%] md:w-[100%] mx-auto"
               >
                 <Image
                   src={rating.liked ? assets.like : assets.unlike}

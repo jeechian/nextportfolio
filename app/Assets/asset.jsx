@@ -1,4 +1,4 @@
-import jeeChian from "./JeeChian.jpg";
+import jeeChian from "./JeeChian1.jpg";
 import unlike from "./icon/heart_2.png"
 import like from "./icon/heart_1.png"
 import facebook_icon from "./icon/facebook_icon.png"
@@ -64,8 +64,13 @@ export const iconSocial = [
   { name: "Facebook", link: "https://www.facebook.com/jeechian.ng", src: facebook_icon },
   { name: "Instagram", link: "https://www.instagram.com/jeechian__/", src: instagram_icon },
   { name: "Education", link: "mailto:j2303@student.newinti.edu.my", src: email_icon },
-  { name: "Resume", link: "/NgJeeChian_Resume.pdf", src: resume_icon } // Updated link to the file in public folder
 ];
+
+export const sample=[
+  { name: "LB", src: LB_idle },
+  { name: "EP", src: EP3 },
+  { name: "WD", src: WD1 },
+]
 
 export const assets = {
   jeeChian,
@@ -80,7 +85,8 @@ export const assets = {
   Axe2,
   Closure2,
   Shoes2,
-  Home
+  Home,
+  resume_icon
 };
 export const gameDev = [
   { name: "LB_idle", src: LB_idle },
