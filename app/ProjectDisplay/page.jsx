@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect, useRef } from "react"; // Import useRef
 import { motion } from "framer-motion";
 import GameDev from "../Programme/page";
